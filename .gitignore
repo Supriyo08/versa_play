@@ -1,0 +1,55 @@
+# dependencies
+node_modules/
+
+# Next.js
+/.next/
+/out/
+
+# production
+/build
+
+# Expo (for mobile)
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+/ios
+/android
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+.env
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Prisma / SQLite
+prisma/dev.db
+prisma/dev.db-journal
+dev.db
+dev.db-journal
+
+# Vercel
+.vercel

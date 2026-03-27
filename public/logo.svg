@@ -1,0 +1,9 @@
+<svg width="200" height="40" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon: Hexagonal play shape -->
+  <path d="M4 12L16 4L28 12V28L16 36L4 28V12Z" fill="#c8ff00" opacity="0.15" stroke="#c8ff00" stroke-width="1.5"/>
+  <path d="M13 14L21 20L13 26V14Z" fill="#c8ff00"/>
+  <!-- Text: VersaPlay -->
+  <text x="36" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" fill="#ffffff" font-style="italic">
+    Versa<tspan fill="#c8ff00">Play</tspan>
+  </text>
+</svg>

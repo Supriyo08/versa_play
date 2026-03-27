@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vp-dark: #0a0a0f;
+  --vp-card: #14141f;
+  --vp-card-hover: #1a1a2e;
+  --vp-border: #1e1e30;
+  --vp-lime: #c8ff00;
+  --vp-lime-dark: #a8d900;
+  --vp-blue: #4a7cff;
+  --vp-green: #22c55e;
+  --vp-red: #ef4444;
+  --vp-orange: #f59e0b;
+  --vp-purple: #a855f7;
+  --vp-text: #e4e4e7;
+  --vp-text-dim: #71717a;
+  --vp-text-muted: #52525b;
+  --vp-sidebar: #0f0f1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--vp-dark);
+  color: var(--vp-text);
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-text-muted);
+}
+
+/* Radar chart styling */
+.radar-chart {
+  position: relative;
+}
+
+/* Gradient overlays */
+.hero-gradient {
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 15, 0.6) 50%, rgba(10, 10, 15, 1) 100%);
+}
+
+.card-glow {
+  box-shadow: 0 0 20px rgba(200, 255, 0, 0.05);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(200, 255, 0, 0.1);
+}
+
+/* Badge pulse animation */
+@keyframes pulse-lime {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(200, 255, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(200, 255, 0, 0);
+  }
+}
+
+.pulse-lime {
+  animation: pulse-lime 2s infinite;
+}
+
+/* Live indicator */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.live-dot {
+  animation: blink 1.5s infinite;
+}
+
+/* Mobile responsive helpers */
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Match card animations */
+.match-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Sidebar active indicator */
+.sidebar-active {
+  border-left: 3px solid var(--vp-lime);
+  background: rgba(200, 255, 0, 0.05);
+}
